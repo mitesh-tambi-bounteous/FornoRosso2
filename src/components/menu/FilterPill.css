@@ -1,0 +1,16 @@
+.filter-pill {
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-14);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-pill--active {
+  background: var(--color-brand);
+  color: var(--color-fg-on-dark);
+}
