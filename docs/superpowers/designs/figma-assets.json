@@ -1,150 +1,195 @@
 {
-  "count": 7,
+  "count": 9,
   "note": "Source bitmaps exported from the Figma file's image fills \u2014 the ORIGINAL uploads, at full resolution and uncropped, not renders. Each entry names the node that paints it and the box it is painted into. Use these files; do not generate substitute artwork.",
   "assets": [
     {
-      "node_id": "6:39",
+      "node_id": "13:43",
       "layer_name": "Rectangle",
       "section": {
-        "node_id": "6:25",
-        "name": "hero"
+        "node_id": "13:39",
+        "name": "menu-grid"
       },
       "ancestors": [
-        "home-page",
-        "hero",
-        "hero-image-wrapper"
-      ],
-      "painted_box": {
-        "width": 616.0,
-        "height": 480.0
-      },
-      "scale_mode": "FILL",
-      "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-39-hero-image-wrapper.png"
-    },
-    {
-      "node_id": "6:62",
-      "layer_name": "Rectangle",
-      "section": {
-        "node_id": "6:54",
-        "name": "featured-section"
-      },
-      "ancestors": [
-        "featured-section",
-        "featured-grid",
+        "menu-grid",
+        "Frame",
         "Frame",
         "Frame"
       ],
       "painted_box": {
-        "width": 302.0,
-        "height": 220.0
+        "width": 405.3333435058594,
+        "height": 240.0
       },
       "scale_mode": "FILL",
       "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-62-featured-grid.png"
+      "file": "./docs/superpowers/designs/figma-asset-13-43-menu-grid.png"
     },
     {
-      "node_id": "6:74",
+      "node_id": "13:59",
       "layer_name": "Rectangle",
       "section": {
-        "node_id": "6:54",
-        "name": "featured-section"
+        "node_id": "13:39",
+        "name": "menu-grid"
       },
       "ancestors": [
-        "featured-section",
-        "featured-grid",
+        "menu-grid",
+        "Frame",
         "Frame",
         "Frame"
       ],
       "painted_box": {
-        "width": 302.0,
-        "height": 220.0
+        "width": 405.33331298828125,
+        "height": 240.0
       },
       "scale_mode": "FILL",
       "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-74-featured-grid.png"
+      "file": "./docs/superpowers/designs/figma-asset-13-59-menu-grid.png"
     },
     {
-      "node_id": "6:86",
+      "node_id": "13:75",
       "layer_name": "Rectangle",
       "section": {
-        "node_id": "6:54",
-        "name": "featured-section"
+        "node_id": "13:39",
+        "name": "menu-grid"
       },
       "ancestors": [
-        "featured-section",
-        "featured-grid",
+        "menu-grid",
+        "Frame",
         "Frame",
         "Frame"
       ],
       "painted_box": {
-        "width": 302.0,
-        "height": 220.0
+        "width": 405.33331298828125,
+        "height": 240.0
       },
       "scale_mode": "FILL",
       "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-86-featured-grid.png"
+      "file": "./docs/superpowers/designs/figma-asset-13-75-menu-grid.png"
     },
     {
-      "node_id": "6:98",
+      "node_id": "13:92",
       "layer_name": "Rectangle",
       "section": {
-        "node_id": "6:54",
-        "name": "featured-section"
+        "node_id": "13:39",
+        "name": "menu-grid"
       },
       "ancestors": [
-        "featured-section",
-        "featured-grid",
+        "menu-grid",
+        "Frame",
         "Frame",
         "Frame"
       ],
       "painted_box": {
-        "width": 302.0,
-        "height": 220.0
+        "width": 405.3333435058594,
+        "height": 240.0
       },
       "scale_mode": "FILL",
       "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-98-featured-grid.png"
+      "file": "./docs/superpowers/designs/figma-asset-13-92-menu-grid.png"
     },
     {
-      "node_id": "6:134",
+      "node_id": "13:108",
       "layer_name": "Rectangle",
       "section": {
-        "node_id": "6:108",
-        "name": "story-section"
+        "node_id": "13:39",
+        "name": "menu-grid"
       },
       "ancestors": [
-        "home-page",
-        "story-section",
-        "story-img-collage"
+        "menu-grid",
+        "Frame",
+        "Frame",
+        "Frame"
       ],
       "painted_box": {
-        "width": 292.0,
-        "height": 520.0
+        "width": 405.33331298828125,
+        "height": 240.0
       },
       "scale_mode": "FILL",
       "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-134-story-img-collage.png"
+      "file": "./docs/superpowers/designs/figma-asset-13-108-menu-grid.png"
     },
     {
-      "node_id": "6:135",
+      "node_id": "13:124",
       "layer_name": "Rectangle",
       "section": {
-        "node_id": "6:108",
-        "name": "story-section"
+        "node_id": "13:39",
+        "name": "menu-grid"
       },
       "ancestors": [
-        "home-page",
-        "story-section",
-        "story-img-collage"
+        "menu-grid",
+        "Frame",
+        "Frame",
+        "Frame"
       ],
       "painted_box": {
-        "width": 292.0,
-        "height": 520.0
+        "width": 405.33331298828125,
+        "height": 240.0
       },
       "scale_mode": "FILL",
       "css_object_fit": "cover",
-      "file": "./docs/superpowers/designs/figma-asset-6-135-story-img-collage.png"
+      "file": "./docs/superpowers/designs/figma-asset-13-124-menu-grid.png"
+    },
+    {
+      "node_id": "13:141",
+      "layer_name": "Rectangle",
+      "section": {
+        "node_id": "13:39",
+        "name": "menu-grid"
+      },
+      "ancestors": [
+        "menu-grid",
+        "Frame",
+        "Frame",
+        "Frame"
+      ],
+      "painted_box": {
+        "width": 405.3333435058594,
+        "height": 240.0
+      },
+      "scale_mode": "FILL",
+      "css_object_fit": "cover",
+      "file": "./docs/superpowers/designs/figma-asset-13-141-menu-grid.png"
+    },
+    {
+      "node_id": "13:157",
+      "layer_name": "Rectangle",
+      "section": {
+        "node_id": "13:39",
+        "name": "menu-grid"
+      },
+      "ancestors": [
+        "menu-grid",
+        "Frame",
+        "Frame",
+        "Frame"
+      ],
+      "painted_box": {
+        "width": 405.33331298828125,
+        "height": 240.0
+      },
+      "scale_mode": "FILL",
+      "css_object_fit": "cover",
+      "file": "./docs/superpowers/designs/figma-asset-13-157-menu-grid.png"
+    },
+    {
+      "node_id": "13:173",
+      "layer_name": "Rectangle",
+      "section": {
+        "node_id": "13:39",
+        "name": "menu-grid"
+      },
+      "ancestors": [
+        "menu-grid",
+        "Frame",
+        "Frame",
+        "Frame"
+      ],
+      "painted_box": {
+        "width": 405.33331298828125,
+        "height": 240.0
+      },
+      "scale_mode": "FILL",
+      "css_object_fit": "cover",
+      "file": "./docs/superpowers/designs/figma-asset-13-173-menu-grid.png"
     }
   ]
 }
