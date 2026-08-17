@@ -1,0 +1,12 @@
+.featured-pizzas {
+  background: var(--color-bg);
+  padding: 80px 96px;
+}
+
+.featured-pizzas__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 24px;
+  margin-top: 48px;
+}

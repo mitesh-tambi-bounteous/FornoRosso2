@@ -1,0 +1,17 @@
+.text {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-16);
+  line-height: 1.6;
+}
+
+.text--fg {
+  color: var(--color-fg);
+}
+
+.text--fg-on-dark {
+  color: var(--color-fg-on-dark);
+}
+
+.text--muted {
+  color: var(--color-muted);
+}

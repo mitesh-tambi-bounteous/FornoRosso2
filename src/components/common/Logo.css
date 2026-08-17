@@ -1,0 +1,27 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo__mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--color-brand);
+  color: var(--color-fg-on-dark);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: var(--font-size-20);
+}
+
+.logo__wordmark {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: var(--font-size-20);
+  color: var(--color-fg-on-dark);
+}

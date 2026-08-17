@@ -1,0 +1,21 @@
+.brand-story {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 64px;
+  background: var(--color-surface-alt);
+  padding: 80px 96px;
+}
+
+.brand-story__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 560px;
+}
+
+.brand-story__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -1,0 +1,19 @@
+.nav-bar {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-link {
+  color: var(--color-fg-on-dark);
+  opacity: 0.75;
+  text-decoration: none;
+  font-size: var(--font-size-15);
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link--active {
+  color: var(--color-brand);
+  opacity: 1;
+  border-bottom-color: var(--color-brand);
+}

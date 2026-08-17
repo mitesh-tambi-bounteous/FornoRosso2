@@ -1,0 +1,25 @@
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+}
+
+.footer-bottom__copyright {
+  color: var(--color-fg-on-dark);
+  opacity: 0.6;
+  font-size: var(--font-size-14);
+  margin: 0;
+}
+
+.footer-bottom__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-bottom__links a {
+  color: var(--color-fg-on-dark);
+  opacity: 0.75;
+  font-size: var(--font-size-14);
+  text-decoration: none;
+}

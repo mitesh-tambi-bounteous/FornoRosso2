@@ -1,0 +1,11 @@
+.image-collage {
+  display: flex;
+  gap: 16px;
+}
+
+.image-collage img {
+  width: 292px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-card);
+}

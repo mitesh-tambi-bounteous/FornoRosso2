@@ -1,0 +1,28 @@
+:root {
+  --color-bg: #fcfaf6;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3efe9;
+  --color-fg: #151212;
+  --color-fg-on-dark: #ffffff;
+  --color-muted: #6b6661;
+  --color-brand: #c82d25;
+  --color-accent-green: #2a7043;
+
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'Geist', sans-serif;
+
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-22: 22px;
+  --font-size-24: 24px;
+  --font-size-40: 40px;
+  --font-size-64: 64px;
+
+  --radius-pill: 20px;
+  --radius-card: 8px;
+}

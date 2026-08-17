@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Figma Mapping Review — Forno Rosso Home Page</title>
+<style>
+  :root {
+    --bg: #FCFAF6;
+    --surface: #FFFFFF;
+    --border: #E4DED3;
+    --fg: #151212;
+    --muted: #6B6661;
+    --brand: #C82D25;
+    --accent-green: #2A7043;
+    --alt-bg: #F3EFE9;
+    --font-display: Fraunces, Georgia, serif;
+    --font-body: Geist, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    --radius: 8px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.5;
+  }
+
+  .reviewer-bar {
+    background: var(--fg);
+    color: var(--surface);
+    padding: 10px 24px;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .reviewer-bar strong { font-family: var(--font-display); }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    margin: 0 0 4px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin: 40px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--brand);
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    margin: 24px 0 8px;
+  }
+  p.lede {
+    color: var(--muted);
+    max-width: 70ch;
+  }
+
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--brand);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+
+  figure {
+    margin: 0 0 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  figure img { display: block; width: 100%; height: auto; }
+  figcaption {
+    padding: 10px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--alt-bg);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  tr:last-child td { border-bottom: none; }
+  td code, .mono { font-family: var(--font-mono); font-size: 12px; }
+
+  .status-existing {
+    color: var(--accent-green);
+    font-weight: 600;
+  }
+  .status-proposed {
+    color: var(--brand);
+    font-weight: 600;
+  }
+
+  .artboard-block {
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    background: var(--surface);
+  }
+  .artboard-block header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .artboard-block header h3 { margin: 0; }
+  .kind-pill {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: var(--alt-bg);
+    color: var(--fg);
+    border-radius: 999px;
+    padding: 3px 10px;
+  }
+  .bounds { font-size: 12px; color: var(--muted); font-family: var(--font-mono); }
+
+  .token-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .token-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .swatch { height: 48px; }
+  .token-card .meta { padding: 8px 10px; font-size: 12px; }
+  .token-card .meta .name { font-weight: 600; }
+  .token-card .meta .hex { color: var(--muted); font-family: var(--font-mono); }
+  .token-card .meta .usage { color: var(--muted); margin-top: 4px; }
+
+  .qa-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+  .qa-item {
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--muted);
+    border-radius: var(--radius);
+    padding: 12px 16px;
+    background: var(--surface);
+  }
+  .qa-item.blocking { border-left-color: var(--brand); }
+  .qa-item h4 { margin: 0 0 6px; font-size: 14px; }
+  .qa-item .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-radius: 999px;
+    padding: 2px 8px;
+    margin-left: 8px;
+  }
+  .tag.blocking { background: var(--brand); color: var(--surface); }
+  .tag.nonblocking { background: var(--alt-bg); color: var(--muted); }
+  .qa-item .assumption {
+    margin-top: 8px;
+    padding: 8px 10px;
+    background: var(--alt-bg);
+    border-radius: var(--radius);
+    font-size: 13px;
+  }
+  .qa-item .assumption strong { font-family: var(--font-body); }
+
+  .excluded-empty {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  footer.page-footer {
+    margin-top: 48px;
+    padding: 16px 24px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+  <div class="reviewer-bar">
+    <span><strong>Figma → Code mapping review</strong> — home-page (node 6:6)</span>
+    <span>Rendered PNG is authoritative for visuals. This page documents HOW arc read the design, it does not redraw it.</span>
+  </div>
+
+  <main>
+    <h1>Forno Rosso — Home Page</h1>
+    <p class="lede">
+      This is a review surface for a greenfield project with no existing design system and no
+      component catalogue yet. Every component below is <span class="status-proposed">proposed_new</span>.
+      Nothing here should be read as an arc house style — all colors, type, and spacing shown are
+      distilled directly from the Figma frame's own tokens.
+    </p>
+
+    <div class="callout">
+      Source frame: <code>Kzae8FDEX2i6bB6tcai7JX</code>, node <code>6:6</code> ("home-page"),
+      1440 × 2786. A single desktop-width artboard — no alternate breakpoints, no revision
+      artboards, no component-master instances found on the canvas.
+    </div>
+
+    <h2>Rendered design (source of truth for visuals)</h2>
+    <figure>
+      <img src="figma-frame.png" alt="Rendered Figma frame — Forno Rosso home page">
+      <figcaption>figma-frame.png — full home page render, 1440px canvas width.</figcaption>
+    </figure>
+
+    <h2>Artboards</h2>
+    <div class="artboard-block">
+      <header>
+        <h3>home-page <span class="mono">(6:6)</span></h3>
+        <span class="kind-pill">screen</span>
+      </header>
+      <p class="bounds">bounds: x=-692, y=-450, w=1440, h=2786</p>
+      <p>
+        Marketing landing / home page: header, hero, delivery info banner, featured pizzas grid,
+        brand story section, footer. No OS/browser chrome or mockup scaffolding was present in the
+        frame to exclude.
+      </p>
+    </div>
+
+    <h2>Distilled tokens</h2>
+    <h3>Colors</h3>
+    <div class="token-grid">
+      <div class="token-card">
+        <div class="swatch" style="background:var(--fg)"></div>
+        <div class="meta"><div class="name">ink</div><div class="hex">#151212</div><div class="usage">header, hero, footer, dark card panels</div></div>
+      </div>
+      <div class="token-card">
+        <div class="swatch" style="background:var(--accent-green)"></div>
+        <div class="meta"><div class="name">forest</div><div class="hex">#2A7043</div><div class="usage">delivery info banner background</div></div>
+      </div>
+      <div class="token-card">
+        <div class="swatch" style="background:var(--muted)"></div>
+        <div class="meta"><div class="name">slate</div><div class="hex">#6B6661</div><div class="usage">muted/secondary text on light backgrounds</div></div>
+      </div>
+      <div class="token-card">
+        <div class="swatch" style="background:var(--brand)"></div>
+        <div class="meta"><div class="name">brand-red</div><div class="hex">#C82D25</div><div class="usage">logo badge, primary CTA, price text, active nav</div></div>
+      </div>
+      <div class="token-card">
+        <div class="swatch" style="background:var(--alt-bg)"></div>
+        <div class="meta"><div class="name">cream</div><div class="hex">#F3EFE9</div><div class="usage">story-section background</div></div>
+      </div>
+      <div class="token-card">
+        <div class="swatch" style="background:var(--bg)"></div>
+        <div class="meta"><div class="name">paper</div><div class="hex">#FCFAF6</div><div class="usage">page background, featured-section background</div></div>
+      </div>
+      <div class="token-card">
+        <div class="swatch" style="background:var(--surface); border-bottom:1px solid var(--border)"></div>
+        <div class="meta"><div class="name">white</div><div class="hex">#FFFFFF</div><div class="usage">text on dark surfaces, card backgrounds</div></div>
+      </div>
+    </div>
+
+    <h3>Typography</h3>
+    <table>
+      <tr><th>Role</th><th>Family</th><th>Notes</th></tr>
+      <tr><td>Display</td><td class="mono">Fraunces</td><td>Logomark (italic bold), all section headings (semibold/bold)</td></tr>
+      <tr><td>Body / UI</td><td class="mono">Geist</td><td>Nav links, body copy, labels, buttons</td></tr>
+      <tr><td>Sizes</td><td colspan="2" class="mono">12, 13, 14, 15, 16, 18, 20, 22, 24, 40, 64 px</td></tr>
+    </table>
+
+    <h3>Radii</h3>
+    <table>
+      <tr><th>Token</th><th>Value</th><th>Usage</th></tr>
+      <tr><td>pill</td><td>20px</td><td>Logo badge, chips, pill buttons</td></tr>
+      <tr><td>card</td><td>8px</td><td>Buttons, pizza cards, feature icon tiles</td></tr>
+    </table>
+
+    <h2>Component map — grouped by artboard</h2>
+
+    <h3>home-page (6:6)</h3>
+    <table>
+      <tr>
+        <th>Figma node</th><th>Code component</th><th>Status</th><th>Props</th><th>Notes</th>
+      </tr>
+      <tr><td class="mono">6:7 header</td><td>SiteHeader</td><td class="status-proposed">proposed_new</td><td>—</td><td>Dark fixed header composing Logo, NavBar, HeaderCartStatus.</td></tr>
+      <tr><td class="mono">6:8 logo-group</td><td>Logo</td><td class="status-proposed">proposed_new</td><td class="mono">mark: "F", wordmark: "Forno Rosso"</td><td>Reused identically in FooterBrand (6:138/6:139).</td></tr>
+      <tr><td class="mono">6:12 nav-links</td><td>NavBar</td><td class="status-proposed">proposed_new</td><td>—</td><td>Composes 3 NavLink instances.</td></tr>
+      <tr><td class="mono">6:13 Home</td><td>NavLink</td><td class="status-proposed">proposed_new</td><td class="mono">label: "Home", active: true</td><td>Active state: brand-red text + 2px red underline (6:15).</td></tr>
+      <tr><td class="mono">6:16 Our Menu</td><td>NavLink</td><td class="status-proposed">proposed_new</td><td class="mono">label: "Our Menu", active: false</td><td>Reuses NavLink proposed at 6:13.</td></tr>
+      <tr><td class="mono">6:18 Cart</td><td>NavLink</td><td class="status-proposed">proposed_new</td><td class="mono">label: "Cart", active: false</td><td>Reuses NavLink proposed at 6:13.</td></tr>
+      <tr><td class="mono">6:20 header-cart</td><td>HeaderCartStatus</td><td class="status-proposed">proposed_new</td><td>—</td><td>Groups delivery-estimate text (6:21) with CartButton (6:22).</td></tr>
+      <tr><td class="mono">6:22 cart-icon-btn</td><td>CartButton</td><td class="status-proposed">proposed_new</td><td class="mono">count: 3</td><td>Translucent white pill, cart icon + count badge.</td></tr>
+      <tr><td class="mono">6:569 shopping-cart vector</td><td>Icon</td><td class="status-proposed">proposed_new</td><td class="mono">name: "shopping-cart"</td><td>Generic icon component backing every vector leaf in the frame (arrow-right, plus, truck, star, shield, compass, instagram, facebook, twitter).</td></tr>
+      <tr><td class="mono">6:25 hero</td><td>HeroSection</td><td class="status-proposed">proposed_new</td><td>—</td><td>Dark full-bleed section; composes Badge, Button ×2, Icon.</td></tr>
+      <tr><td class="mono">6:27 badge chip</td><td>Badge</td><td class="status-proposed">proposed_new</td><td class="mono">icon: "flame", label: "Authentic Neapolitan Woodfired"</td><td>See open question hero-badge-icon-name.</td></tr>
+      <tr><td class="mono">6:30 heading</td><td>HeroSection</td><td class="status-proposed">proposed_new</td><td>—</td><td>`heading` slot; two-tone text per PNG (white + brand-red line).</td></tr>
+      <tr><td class="mono">6:31 paragraph</td><td>HeroSection</td><td class="status-proposed">proposed_new</td><td>—</td><td>`body` slot.</td></tr>
+      <tr><td class="mono">6:33 primary CTA</td><td>Button</td><td class="status-proposed">proposed_new</td><td class="mono">variant: "primary", label: "Order Online Now", icon: "arrow-right"</td><td>Brand-red fill, white text, 8px radius.</td></tr>
+      <tr><td class="mono">6:36 secondary CTA</td><td>Button</td><td class="status-proposed">proposed_new</td><td class="mono">variant: "outline", label: "Explore Full Menu"</td><td>Transparent fill, white border.</td></tr>
+      <tr><td class="mono">6:39 hero image</td><td>HeroSection</td><td class="status-proposed">proposed_new</td><td class="mono">image: figma-asset-6-39-hero-image-wrapper.png, objectFit: cover</td><td>`image` slot; asset per figma-assets.json node 6:39.</td></tr>
+      <tr><td class="mono">6:40 delivery-banner</td><td>InfoBanner</td><td class="status-proposed">proposed_new</td><td>—</td><td>Forest-green strip: one IconTextBlock + two StatItems.</td></tr>
+      <tr><td class="mono">6:41 icon+text</td><td>IconTextBlock</td><td class="status-proposed">proposed_new</td><td class="mono">icon: "truck", title: "Free Delivery On Orders Over $35", body: "Craving quality?…"</td><td>—</td></tr>
+      <tr><td class="mono">6:48 ETA stat</td><td>StatItem</td><td class="status-proposed">proposed_new</td><td class="mono">label: "Average ETA", value: "25 - 35 Min"</td><td>—</td></tr>
+      <tr><td class="mono">6:51 temp stat</td><td>StatItem</td><td class="status-proposed">proposed_new</td><td class="mono">label: "Pizza Temperature", value: "Piping Hot Guaranteed"</td><td>Reuses StatItem proposed at 6:48.</td></tr>
+      <tr><td class="mono">6:54 featured-section</td><td>FeaturedSection</td><td class="status-proposed">proposed_new</td><td>—</td><td>Paper-background section: SectionHeading + CardGrid.</td></tr>
+      <tr><td class="mono">6:55 heading block</td><td>SectionHeading</td><td class="status-proposed">proposed_new</td><td class="mono">eyebrow: "Chef Recommendations", title: "Popular Sourdough Pizzas"</td><td>Centered variant with red rule.</td></tr>
+      <tr><td class="mono">6:59 featured-grid</td><td>CardGrid</td><td class="status-proposed">proposed_new</td><td>—</td><td>4-column responsive grid.</td></tr>
+      <tr><td class="mono">6:60 card 1</td><td>PizzaCard</td><td class="status-proposed">proposed_new</td><td class="mono">name: "Diavola", price: "$16.50", image: figma-asset-6-62-featured-grid.png</td><td>White card, image top (cover), name/price row, description, Add to Order Button.</td></tr>
+      <tr><td class="mono">6:72 card 2</td><td>PizzaCard</td><td class="status-proposed">proposed_new</td><td class="mono">name: "Funghi Selvatici & Tartufo", price: "$18.00", image: figma-asset-6-74-featured-grid.png</td><td>Reuses PizzaCard proposed at 6:60. Name truncated with ellipsis in PNG — see open question.</td></tr>
+      <tr><td class="mono">6:84 card 3</td><td>PizzaCard</td><td class="status-proposed">proposed_new</td><td class="mono">name: "Classic Margherita", price: "$14.50", image: figma-asset-6-86-featured-grid.png</td><td>Reuses PizzaCard proposed at 6:60.</td></tr>
+      <tr><td class="mono">6:96 card 4</td><td>PizzaCard</td><td class="status-proposed">proposed_new</td><td class="mono">name: "Prosciutto Crudo e Rucola", price: "$19.00", image: figma-asset-6-98-featured-grid.png</td><td>Reuses PizzaCard proposed at 6:60. Taller card — align footers, not fixed height.</td></tr>
+      <tr><td class="mono">6:69 Add to Order</td><td>Button</td><td class="status-proposed">proposed_new</td><td class="mono">variant: "dark", label: "Add to Order", icon: "plus"</td><td>Reuses Button proposed at 6:33 (dark variant), one per PizzaCard.</td></tr>
+      <tr><td class="mono">6:108 story-section</td><td>StorySection</td><td class="status-proposed">proposed_new</td><td>—</td><td>Cream section: copy column + ImageCollage.</td></tr>
+      <tr><td class="mono">6:110 heading block</td><td>SectionHeading</td><td class="status-proposed">proposed_new</td><td class="mono">eyebrow: "The Sourdough Secret", title: "Our Passion for the Perfect Crust", align: "left"</td><td>Reuses SectionHeading proposed at 6:55, left-aligned, no rule.</td></tr>
+      <tr><td class="mono">6:114 feature list</td><td>FeatureList</td><td class="status-proposed">proposed_new</td><td>—</td><td>Composes 3 FeatureListItem rows.</td></tr>
+      <tr><td class="mono">6:115 item 1</td><td>FeatureListItem</td><td class="status-proposed">proposed_new</td><td class="mono">icon: "star", title: "100% Imported San Marzano Tomatoes"</td><td>—</td></tr>
+      <tr><td class="mono">6:121 item 2</td><td>FeatureListItem</td><td class="status-proposed">proposed_new</td><td class="mono">icon: "shield", title: "Fior di Latte & Fresh Mozzarella"</td><td>Reuses FeatureListItem proposed at 6:115.</td></tr>
+      <tr><td class="mono">6:127 item 3</td><td>FeatureListItem</td><td class="status-proposed">proposed_new</td><td class="mono">icon: "compass", title: "900°F Stone Hearth Wood Oven"</td><td>Reuses FeatureListItem proposed at 6:115.</td></tr>
+      <tr><td class="mono">6:133 story-img-collage</td><td>ImageCollage</td><td class="status-proposed">proposed_new</td><td class="mono">images: [figma-asset-6-134-story-img-collage.png, figma-asset-6-135-story-img-collage.png], objectFit: cover</td><td>Two side-by-side portrait images (dough stretch, oven flame).</td></tr>
+      <tr><td class="mono">6:136 footer</td><td>SiteFooter</td><td class="status-proposed">proposed_new</td><td>—</td><td>Dark footer: FooterBrand, two FooterLinkColumns, Divider, FooterBottom.</td></tr>
+      <tr><td class="mono">6:138 footer-brand</td><td>FooterBrand</td><td class="status-proposed">proposed_new</td><td>—</td><td>Reuses Logo proposed at 6:8, plus description + SocialLinks.</td></tr>
+      <tr><td class="mono">6:144 social-row</td><td>SocialLinks</td><td class="status-proposed">proposed_new</td><td>—</td><td>3 circular icon buttons using Icon proposed at 6:569.</td></tr>
+      <tr><td class="mono">6:151 footer-col</td><td>FooterLinkColumn</td><td class="status-proposed">proposed_new</td><td class="mono">title: "Kitchen Hours"</td><td>Label/value row layout.</td></tr>
+      <tr><td class="mono">6:163 footer-col</td><td>FooterLinkColumn</td><td class="status-proposed">proposed_new</td><td class="mono">title: "Pizzeria Location"</td><td>Reuses FooterLinkColumn proposed at 6:151, plain-text-line layout variant.</td></tr>
+      <tr><td class="mono">6:170 Line</td><td>Divider</td><td class="status-proposed">proposed_new</td><td>—</td><td>1px hairline above bottom bar.</td></tr>
+      <tr><td class="mono">6:171 footer-bottom</td><td>FooterBottom</td><td class="status-proposed">proposed_new</td><td class="mono">copyright, links: ["Privacy Policy", "Delivery Terms"]</td><td>—</td></tr>
+    </table>
+
+    <h2>Excluded (device chrome / scaffolding)</h2>
+    <p class="excluded-empty">None found — the exported frame begins directly at the site header with no simulated browser chrome, status bar, or mockup device frame to strip out.</p>
+
+    <h2>Open questions</h2>
+    <ul class="qa-list">
+      <li class="qa-item">
+        <h4>Only one (desktop, 1440px) frame is provided <span class="tag nonblocking">non-blocking</span></h4>
+        <p>The canvas holds a single 1440px artboard — no tablet/mobile variant exists to validate how the nav, 4-column grid, story section, or footer columns should reflow at narrower widths.</p>
+        <div class="assumption"><strong>Assumption:</strong> implement conventional responsive stacking/collapse behavior without a Figma reference to check against.</div>
+      </li>
+      <li class="qa-item">
+        <h4>Long pizza names are visually truncated in the PNG <span class="tag nonblocking">non-blocking</span></h4>
+        <p>The JSON text nodes hold full names ("Funghi Selvatici & Tartufo", "Prosciutto Crudo e Rucola"), but the rendered PNG shows them cut off with an ellipsis at the 302px card width, on the same line as the price.</p>
+        <div class="assumption"><strong>Assumption:</strong> apply single-line ellipsis truncation to the PizzaCard name, matching the PNG rather than wrapping.</div>
+      </li>
+      <li class="qa-item">
+        <h4>Hero badge icon layer named "fire-extinguisher" renders as a flame <span class="tag nonblocking">non-blocking</span></h4>
+        <p>Node 6:679 in the "Authentic Neapolitan Woodfired" badge is named 'fire-extinguisher' in the layer tree, but the PNG shows a flame-style glyph fitting the wood-fired theme.</p>
+        <div class="assumption"><strong>Assumption:</strong> source a flame/fire icon matching the PNG; treat the layer name as an icon-library artifact, not the intended semantic.</div>
+      </li>
+      <li class="qa-item">
+        <h4>No empty/loading/error states drawn for the featured grid or cart <span class="tag nonblocking">non-blocking</span></h4>
+        <p>The design only shows the grid fully populated (4 items) and a cart badge fixed at count 3; no state is drawn for zero results, a loading fetch, or an empty cart.</p>
+        <div class="assumption"><strong>Assumption:</strong> build FeaturedSection and CartButton to accept dynamic data, without a designed empty/loading/error state to implement against for this page in isolation.</div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="page-footer">
+    Generated mapping review — source: figma-frame.json / figma-frame.png / figma-assets.json. See design-context.json for the machine-readable version of this map.
+  </footer>
+
+</body>
+</html>
+
+<!-- arc:css-inlined -->

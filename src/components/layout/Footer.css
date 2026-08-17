@@ -1,0 +1,11 @@
+.footer {
+  background: var(--color-fg);
+  padding: 64px 96px 32px;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  padding-bottom: 48px;
+}
