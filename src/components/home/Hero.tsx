@@ -17,8 +17,7 @@ export default function Hero() {
           bases fermented for 48 hours. Order now for fast, direct thermal-bag delivery.
         </Text>
         <div className="hero__actions">
-          <Button variant="primary" label="Order Online Now" icon="arrow-right" />
-          <Button variant="outline" label="Explore Full Menu" to="/menu" />
+          <Button variant="primary" label="Explore Full Menu" icon="arrow-right" to="/menu" />
         </div>
       </div>
       <HeroImage src={heroImage} alt="Wood-fired Margherita pizza" />

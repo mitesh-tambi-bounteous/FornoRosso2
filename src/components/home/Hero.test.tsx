@@ -16,7 +16,7 @@ function renderHero() {
 }
 
 describe('Hero', () => {
-  it('renders headline, subheadline, and both CTAs', () => {
+  it('renders headline, subheadline, and the primary CTA', () => {
     renderHero()
     const heading = screen.getByRole('heading', { level: 1 })
     expect(heading).toHaveTextContent('Wood-Fired Pizza,')
@@ -24,7 +24,6 @@ describe('Hero', () => {
     expect(
       screen.getByText(/Baked at 900°F in our stone ovens/i),
     ).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /Order Online Now/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Explore Full Menu/i })).toBeInTheDocument()
   })
 
