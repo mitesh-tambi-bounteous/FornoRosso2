@@ -19,7 +19,7 @@ function renderFeaturedPizzas() {
 }
 
 describe('FeaturedPizzas', () => {
-  it('renders exactly 4 pizza cards with name, image, price, and Add to Order button', () => {
+  it('renders exactly 4 pizza cards with name, image, price, and Add to Cart button', () => {
     renderFeaturedPizzas()
     const cards = screen.getAllByRole('article')
     expect(cards).toHaveLength(4)
@@ -36,7 +36,7 @@ describe('FeaturedPizzas', () => {
       expect(utils.getByText(expected[i].name)).toBeInTheDocument()
       expect(utils.getByText(expected[i].price)).toBeInTheDocument()
       expect(utils.getByRole('img', { name: expected[i].name })).toBeInTheDocument()
-      expect(utils.getByRole('button', { name: /Add to Order/i })).toBeInTheDocument()
+      expect(utils.getByRole('button', { name: /Add to Cart/i })).toBeInTheDocument()
     })
   })
 
@@ -48,16 +48,20 @@ describe('FeaturedPizzas', () => {
     expect(prosciuttoName.className).toMatch(/truncate/)
   })
 
-  it('adds a new cart line item every time Add to Order is clicked', async () => {
+  it('increments the same line item quantity when Add to Cart is clicked twice, and adds a new line item for a different pizza', async () => {
     const user = userEvent.setup()
     renderFeaturedPizzas()
     const cards = screen.getAllByRole('article')
-    const diavolaButton = within(cards[0]).getByRole('button', { name: /Add to Order/i })
+    const diavolaButton = within(cards[0]).getByRole('button', { name: /Add to Cart/i })
+    const funghiButton = within(cards[1]).getByRole('button', { name: /Add to Cart/i })
 
     await user.click(diavolaButton)
     expect(screen.getByTestId('line-item-count')).toHaveTextContent('1')
 
     await user.click(diavolaButton)
+    expect(screen.getByTestId('line-item-count')).toHaveTextContent('1')
+
+    await user.click(funghiButton)
     expect(screen.getByTestId('line-item-count')).toHaveTextContent('2')
   })
 })

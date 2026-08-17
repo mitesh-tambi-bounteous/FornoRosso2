@@ -48,6 +48,14 @@
   flex-shrink: 0;
 }
 
+.pizza-card__category {
+  color: var(--color-accent-green);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-12);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .pizza-card__description {
   color: var(--color-muted);
   font-size: var(--font-size-14);
