@@ -1,0 +1,38 @@
+.section-heading--center {
+  text-align: center;
+}
+
+.section-heading--left {
+  text-align: left;
+}
+
+.section-heading__eyebrow {
+  font-size: var(--font-size-13);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.section-heading__eyebrow--brand {
+  color: var(--color-brand);
+}
+
+.section-heading__eyebrow--accent-green {
+  color: var(--color-accent-green);
+}
+
+.section-heading__title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-40);
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+.section-heading__rule {
+  display: inline-block;
+  width: 64px;
+  height: 2px;
+  background: var(--color-brand);
+  margin-top: 16px;
+}

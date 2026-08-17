@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--color-fg);
+  padding: 20px 96px;
+}
+
+.header__cart-status {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}

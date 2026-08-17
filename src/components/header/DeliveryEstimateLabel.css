@@ -1,0 +1,12 @@
+.delivery-estimate-label {
+  color: var(--color-fg-on-dark);
+  opacity: 0.75;
+  font-size: var(--font-size-14);
+  margin: 0;
+}
+
+.delivery-estimate-label__value {
+  color: var(--color-accent-green);
+  opacity: 1;
+  font-weight: 600;
+}

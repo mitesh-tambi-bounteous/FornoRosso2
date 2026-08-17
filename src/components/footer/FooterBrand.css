@@ -1,0 +1,11 @@
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 320px;
+}
+
+.footer-brand__description {
+  opacity: 0.75;
+  font-size: var(--font-size-14);
+}

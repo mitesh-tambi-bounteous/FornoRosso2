@@ -1,0 +1,32 @@
+.icon-text-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-text-block__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-fg-on-dark);
+  flex-shrink: 0;
+}
+
+.icon-text-block__title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-18);
+  font-weight: 600;
+  color: var(--color-fg-on-dark);
+  margin: 0;
+}
+
+.icon-text-block__body {
+  font-size: var(--font-size-14);
+  color: var(--color-fg-on-dark);
+  opacity: 0.85;
+  margin: 4px 0 0;
+}

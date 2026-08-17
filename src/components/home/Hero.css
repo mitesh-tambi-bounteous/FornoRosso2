@@ -1,0 +1,27 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  background: var(--color-fg);
+  color: var(--color-fg-on-dark);
+  padding: 80px 96px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 560px;
+}
+
+.hero__heading {
+  font-size: var(--font-size-64);
+  color: var(--color-fg-on-dark);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+}

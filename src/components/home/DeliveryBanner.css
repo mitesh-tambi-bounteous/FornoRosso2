@@ -1,0 +1,13 @@
+.delivery-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--color-accent-green);
+  padding: 24px 96px;
+}
+
+.delivery-banner__stats {
+  display: flex;
+  gap: 48px;
+}
